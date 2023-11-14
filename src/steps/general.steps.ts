@@ -1,7 +1,6 @@
 import { ICustomWorld } from '../support/custom-world';
 import { compareToBaseImage, getImagePath } from '../utils/compareImages';
 import { Then } from '@cucumber/cucumber';
-
 Then('Snapshot {string}', async function (this: ICustomWorld, name: string) {
   const { page } = this;
   await page?.goto('http://localhost:4000/auth/login?callback_uri=http://localhost:4000/');
