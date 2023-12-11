@@ -1,28 +1,30 @@
-import { ICustomWorld } from '../support/custom-world';
-import { config } from '../support/config';
-import { Given, When, Then } from '@cucumber/cucumber';
-import { expect } from '@playwright/test';
+// import { AuthenticationPage } from '../support/pom/auth.page';
+// import { ICustomWorld } from '../support/custom-world';
+// import { Given, When, Then } from '@cucumber/cucumber';
+// import { expect } from '@playwright/test';
 
-Given('Go to the playwright website', async function (this: ICustomWorld) {
-  const page = this.page!;
-  await page.goto(config.BASE_URL);
-  expect(1).toBe(1);
-});
+// Given('the user is on the authentication page', async function (this: ICustomWorld) {
+//   this.page = await this.browser.newPage();
+//   await this.page.goto('http://your-authentication-page-url.com');
+// });
 
-When('Change theme to {string} mode', async function (this: ICustomWorld, mode: string) {
-  expect(mode).toBe(mode);
-  // const page = this.page!;
-  // const html = page.locator('html');
-  // const current = await html.getAttribute('data-theme');
-  // if (current !== mode) {
-  //   await page.locator('nav >> button[title*="dark and light mode"]').click();
-  // }
-  // await page.waitForSelector(`html[data-theme=${mode}]`);
-});
+// When('the user enters a correct phone and password', async function (this: ICustomWorld) {
+//   const authenticationPage = new AuthenticationPage(this.page);
+//   await authenticationPage.enterPhone('correct_phone');
+//   await authenticationPage.enterPassword('correct_password');
+// });
 
-Then('We see {string} mode', async function (this: ICustomWorld, mode: string) {
-  expect(mode).toBe(mode);
-  // const page = this.page!;
-  // const theme = await page.locator('html').getAttribute('data-theme');
-  // expect(theme).toEqual(mode);
-});
+// When('clicks on the "Login" button', async function (this: ICustomWorld) {
+//   const authenticationPage = new AuthenticationPage(this.page);
+//   await authenticationPage.clickLogin();
+// });
+
+// Then('the user should be redirected to the homepage', async function (this: ICustomWorld) {
+//   // await expect(this.page).toHaveURL('http://your-homepage-url.com');
+// });
+
+// Then('see a welcome message with their name', async function (this: ICustomWorld) {
+//   // await expect(this.page.locator('#welcome_message')).toContainText('Welcome');
+// });
+
+// Continue defining other steps using Given, When, Then as needed.
